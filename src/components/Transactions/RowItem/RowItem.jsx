@@ -2,7 +2,7 @@ import s from '../transactions.module.css'
 const RowItem = (props) => {
     console.log(props)
     let trStyle 
-    if (props.theme == "white"){
+    if (props.theme === "white"){
         trStyle = s.rowWhite
     } else {
         trStyle = s.rowGrey

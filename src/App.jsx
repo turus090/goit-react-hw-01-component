@@ -1,13 +1,14 @@
-import Profile from "./Components/Profile/Profile"
-import Statics from "./Components/Statics/Statics"
+import Profile from "./components/Profile/Profile"
+import Statics from "./components/Statics/Statics"
+import Friends from "./components/Friends/Friends"
+import Transactions from "./components/Transactions/Transactions"
 
 import userJSON from './user.json'
 import staticJson from './data.json'
 import friendsJson from './friends.json'
 import transactionsJson from './transactions.json'
 
-import Friends from "./Components/Friends/Friends"
-import Transactions from "./Components/Transactions/Transactions"
+
 const App = () => {
     return (
         <>

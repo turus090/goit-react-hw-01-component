@@ -6,7 +6,7 @@ const Transactions = (props) => {
     const RowCollection = props.transactions.map((item,index)=>{
         return(
             <RowItem 
-                theme= {index%2==0?'white':'grey'}
+                theme= {index%2 === 0?'white':'grey'}
                 key={item.id}
                 type={item.type}
                 amount={item.amount}
