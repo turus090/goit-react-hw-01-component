@@ -1,3 +1,4 @@
+import propTypes from 'prop-types'
 import RowItem from "./RowItem/RowItem"
 import s from "./transactions.module.css"
 const Transactions = ({transactions}) => {
@@ -28,4 +29,9 @@ const Transactions = ({transactions}) => {
         </table>
     )
 }
+
+Transactions.propTypes = {
+    transactions: propTypes.array
+}
+
 export default Transactions 

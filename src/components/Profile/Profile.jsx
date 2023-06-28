@@ -1,4 +1,5 @@
 
+import propTypes from 'prop-types'
 import "./profile.css"
 const Profile = ({avatar, username, tag, location, stats}) => {
     return (
@@ -33,6 +34,14 @@ const Profile = ({avatar, username, tag, location, stats}) => {
         </div>
     </div>
     )
+}
+
+Profile.propTypes = {
+    avatar: propTypes.string,
+    username: propTypes.string,
+    tag: propTypes.string,
+    location: propTypes.string,
+    stats: propTypes.object
 }
 
 export default Profile 

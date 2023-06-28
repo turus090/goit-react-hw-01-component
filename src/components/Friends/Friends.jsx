@@ -1,3 +1,4 @@
+import propTypes from 'prop-types'
 import Friend from "./Friend/Friend"
 import s from "./friends.module.css"
 const Friends = ({friends}) => {
@@ -14,6 +15,10 @@ const Friends = ({friends}) => {
             }
         </ul>
     )
+}
+
+Friends.propTypes = {
+    friends: propTypes.array
 }
 
 export default Friends

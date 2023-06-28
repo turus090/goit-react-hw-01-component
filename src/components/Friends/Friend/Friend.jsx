@@ -1,4 +1,6 @@
+import propTypes from 'prop-types'
 import s from "./friend.module.css"
+
 const Friend = ({isOnline, avatar, name}) => {
     const onlineStyle = isOnline ? s.green : s.red
     return (
@@ -11,6 +13,12 @@ const Friend = ({isOnline, avatar, name}) => {
             <p className={s.name}>{name}</p>
         </li>
     )
+}
+
+Friend.propTypes = {
+    isOnline: propTypes.bool,
+    avatar: propTypes.string,
+    name: propTypes.string
 }
 
 export default Friend

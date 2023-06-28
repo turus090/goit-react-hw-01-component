@@ -1,3 +1,6 @@
+
+
+import propTypes from 'prop-types'
 import s from './static.module.css'
 const Statics = ({staticInfo, title}) => {
     const colors = [ s.blue, s.purple, s.pink, s.birch, s.yellow, s.repeta]
@@ -20,6 +23,11 @@ const Statics = ({staticInfo, title}) => {
         </ul>
 </section>
     )
+}
+
+Statics.propTypes = {
+        staticInfo: propTypes.array,
+        title:propTypes.string
 }
 
 export default Statics
