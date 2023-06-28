@@ -1,7 +1,7 @@
 import s from "./Button.module.css"
-const Button = (props) => {
+const Button = ({text}) => {
     return(
-        <button className={s.btn}>{props.text}</button>
+        <button className={s.btn}>{text}</button>
     )
 }
 

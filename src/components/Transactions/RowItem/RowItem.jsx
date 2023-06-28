@@ -1,17 +1,16 @@
 import s from '../transactions.module.css'
-const RowItem = (props) => {
-    console.log(props)
+const RowItem = ({themeWhite, type, amount, currency}) => {
     let trStyle 
-    if (props.theme === "white"){
+    if (themeWhite){
         trStyle = s.rowWhite
     } else {
         trStyle = s.rowGrey
     }
     return (
         <tr className={`${s.tr} ${trStyle}`}>
-            <td className={s.item}>{props.type}</td>
-            <td className={s.item}>{props.amount}</td>
-            <td className={s.item}>{props.currency}</td>
+            <td className={s.item}>{type}</td>
+            <td className={s.item}>{amount}</td>
+            <td className={s.item}>{currency}</td>
         </tr>
     ) 
 }

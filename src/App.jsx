@@ -20,8 +20,8 @@ const App = () => {
                     avatar ={userJSON.avatar}
                     stats ={userJSON.stats}
                 />
-                <Statics title="Upload stats" static={staticJson}/>
-                <Statics  static={staticJson}/>
+                <Statics title="Upload stats" staticInfo={staticJson}/>
+                <Statics  staticInfo={staticJson}/>
                 <Friends friends={friendsJson}/>
                 <Transactions transactions={transactionsJson}/>
             </div>

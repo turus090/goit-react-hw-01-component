@@ -1,7 +1,7 @@
 import s from './static.module.css'
-const Statics = (props) => {
+const Statics = ({staticInfo, title}) => {
     const colors = [ s.blue, s.purple, s.pink, s.birch, s.yellow, s.repeta]
-    const staticCollection = props.static.map((staticItem,index) =>{
+    const staticCollection = staticInfo.map((staticItem,index) =>{
         const randomColor = colors[Math.round(Math.random() * colors.length)]
         return(
             <li key={staticItem.id} className={`${s.item} ${randomColor}`}>
@@ -13,7 +13,7 @@ const Statics = (props) => {
 
     return(
  <section className={s.statistics}>
-     {props.title ? <h2 className={s.title}>{props.title}</h2> : null}
+     {title && <h2 className={s.title}>{title}</h2>}
 
         <ul className={s.statList}>
             {staticCollection}

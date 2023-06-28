@@ -1,19 +1,7 @@
 import RowItem from "./RowItem/RowItem"
 import s from "./transactions.module.css"
-const Transactions = (props) => {
+const Transactions = ({transactions}) => {
 
-    console.log(props)
-    const RowCollection = props.transactions.map((item,index)=>{
-        return(
-            <RowItem 
-                theme= {index%2 === 0?'white':'grey'}
-                key={item.id}
-                type={item.type}
-                amount={item.amount}
-                currency={item.currency}
-            />
-        )
-    })
     return (
         <table className={s.table}>
             <thead className={s.thead}>
@@ -24,7 +12,17 @@ const Transactions = (props) => {
                 </tr>
             </thead>
             <tbody>
-                {RowCollection}
+                { transactions.map((item,index)=>{
+                return(
+                    <RowItem 
+                        themeWhite= {index%2 === 0}
+                        key={item.id}
+                        type={item.type}
+                        amount={item.amount}
+                        currency={item.currency}
+                    />
+                    )
+                 })}
             </tbody>
             
         </table>

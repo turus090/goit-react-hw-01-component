@@ -1,19 +1,17 @@
 import Friend from "./Friend/Friend"
 import s from "./friends.module.css"
-const Friends = (props) => {
-    const FriendsCollection = props.friends.map(user=>{
-        return(
-            <Friend 
-                avatar={user.avatar}
-                name={user.name}
-                isOnline={user.isOnline}
-                key={user.id}
-            />
-        )
-    })
+const Friends = ({friends}) => {
     return (
         <ul className ={s.friendList}>
-            {FriendsCollection}
+            {friends.map(user => (
+                <Friend 
+                    avatar={user.avatar}
+                    name={user.name}
+                    isOnline={user.isOnline}
+                    key={user.id}
+                />
+            ))
+            }
         </ul>
     )
 }
