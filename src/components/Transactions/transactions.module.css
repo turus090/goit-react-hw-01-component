@@ -26,8 +26,11 @@
     justify-content:space-between;
     align-items: center;
 }
-.itemWhite{
-    color:#FFF;
+.tr:nth-child(odd){
+    background:#FFF;
+}
+.tr:nth-child(even){
+    background: #c4c4c4;
 }
 .item{ 
     width: 33%;

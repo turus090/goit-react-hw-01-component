@@ -2,15 +2,8 @@ import propTypes from 'prop-types'
 
 import s from '../transactions.module.css'
 const RowItem = ({themeWhite, type, amount, currency}) => {
-    console.log( typeof(type))
-    let trStyle 
-    if (themeWhite){
-        trStyle = s.rowWhite
-    } else {
-        trStyle = s.rowGrey
-    }
     return (
-        <tr className={`${s.tr} ${trStyle}`}>
+        <tr className={s.tr}>
             <td className={s.item}>{type}</td>
             <td className={s.item}>{amount}</td>
             <td className={s.item}>{currency}</td>
